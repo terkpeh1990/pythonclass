@@ -1,0 +1,39 @@
+{% extends 'store/base.html' %}
+{% block content %}
+    <div class="m-4">
+        
+        <div class="row d-flex justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-header">
+                        List of Brands
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {% for brand in brands %}
+                                    <tr>
+                                        <th scope="row">{{brand.id}}</th>
+                                        <td>{{brand.name}}</td>
+                                    
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+        
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </div> 
+{% endblock %}
